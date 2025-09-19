@@ -1,8 +1,10 @@
-jekyll:
-  image: jekyll/jekyll:3.8.6
-  command: jekyll serve --livereload --incremental
-  ports:
-    - 4000:4000
-    - 35729:35729
-  volumes:
-    - .:/srv/jekyll
+services:
+  jekyll:
+    image: jekyll/jekyll:3.8.6
+    command: ["sh", "-c", "gem install bundler -v 2.4.22 && jekyll serve --livereload --incremental"]
+    ports:
+      - "4000:4000"
+      - "35729:35729"
+    volumes:
+      - .:/srv/jekyll
+    restart: unless-stopped
