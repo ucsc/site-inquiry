@@ -1,0 +1,60 @@
+---
+layout: default
+class: front
+title: Inquiry @ UC Santa Cruz
+banner:
+  file: 2022/cover-art.jpg
+  text: "Down on the farm"
+current: 2022-23
+---
+
+<div class="row">
+
+  <section class="two-thirds block toc">
+
+    <h1 class="issue-title">{{ page.current }}</h1>
+
+    <ul class="toc-list plain">
+      <li><a href="/{{ page.current }}/welcome/">Welcome</a></li>
+      <li><a href="/{{ page.current }}/briefs/"><span class="caps">Brief</span> <span class="heavy">inquiries</span></a></li>
+      <li><a href="/{{ page.current }}/books/"><span class="caps">Pen</span> <span class="heavy">&amp;</span> <span class="caps">Inq</span></a></li>
+      <li><a href="/{{ page.current }}/contributors/"><span class="caps">Inquiring</span> <span class="heavy">minds</span></a></li>
+
+    </ul>
+
+    <h2 class="header highlight">Features</h2>
+    <div class="features">
+
+      <ul class="toc-list">
+      {% assign sorted_articles = site.articles | where: 'issue','2022' | sort: 'order' %}
+      {% for post in sorted_articles %}
+      {% assign contrib = site.data.contributors | where:"last", post.author-last | first %}
+        {% if post.category == 'feature' %}
+            <li>
+              <h3>
+                <a href="{{ post.url }}">{{ post.title }}</a>
+              </h3>
+              <p class="teaser">{{ post.subhead }}</p>
+
+              <p class="author">By {{ contrib.first }} {{ contrib.last }}</p>
+
+
+
+
+            </li>
+        {% endif %}
+
+      {% endfor %}
+      </ul>
+
+    </div>
+
+  </section>
+
+  <section class="one-third block">
+      <figcaption>Above: What is now the UCSC Center for Agroecology began in the late 1960s as a hand-cultivated organic garden carved out of rocky soil and thick brush by Englishman and expert gardener Alan Chadwick and his eager student apprentices. The farm and garden complex has since expanded to 32 acres of fields, orchards, greenhouses, cabins, and, most recently, an aquaculture facility, all on the same gently sloping campus hill overlooking the Monterey Bay. Credit: Carolyn Lagattuta, with permission.</figcaption>
+      <h3 class="index-headline featured">Download the PDF</h3>
+      <a href="/2022-23/Inquiry2022.pdf">{% asset '2022/inquiry2022.jpg' @magick:resize=380 alt:'2022 cover of Inquiry Magazine' %}</a>
+  </section>
+</div>
+{% include back-to-top.html %}
