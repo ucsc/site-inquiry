@@ -37,19 +37,18 @@ current: 2025-26
     <h2 class="header highlight">Features</h2>
     <div class="features">
       <ul class="toc-list">
-        {% assign sorted_articles = site.articles | where: 'issue','2022' |
-        sort: 'order' %} {% for post in sorted_articles %} {% assign contrib =
-        site.data.contributors | where:"last", post.author-last | first %} {% if
-        post.category == 'feature' %}
+        {% for feature in site.data.features %}
         <li>
           <h3>
-            <a href="{{ post.url }}">{{ post.title }}</a>
+            <a href="{{ feature.url }}">{{ feature.title }}</a>
           </h3>
-          <p class="teaser">{{ post.subhead }}</p>
+          <p class="teaser">{{ feature.subhead }}</p>
 
-          <p class="author">By {{ contrib.first }} {{ contrib.last }}</p>
+          <p class="author">
+            By {{ feature.author.first }} {{ feature.author.last }}
+          </p>
         </li>
-        {% endif %} {% endfor %}
+        {% endfor %}
       </ul>
     </div>
   </section>
