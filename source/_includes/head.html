@@ -1,48 +1,92 @@
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-  <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
-  <meta name="description" content="{% if page.subhead %}{{ page.subhead }}{% else %}{{ site.description }}{% endif %}" />
+  <title>
+    {% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}
+  </title>
+  <meta
+    name="description"
+    content="{% if page.subhead %}{{ page.subhead }}{% else %}{{ site.description }}{% endif %}"
+  />
 
   <meta name="HandheldFriendly" content="True" />
   <meta name="MobileOptimized" content="320" />
-  <meta name="apple-mobile-web-app-capable" content="no">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-capable" content="no" />
+  <meta
+    name="apple-mobile-web-app-status-bar-style"
+    content="black-translucent"
+  />
+  <link
+    rel="alternate"
+    type="application/rss+xml"
+    title="RSS Feed"
+    href="/feed.xml"
+  />
+  <link
+    rel="canonical"
+    href="{{ page.url | prepend: site.baseurl | prepend: site.url }}"
+  />
 
-  <link rel="canonical" href="{{ page.url | prepend: site.baseurl | prepend: site.url }}">
+  <link rel="shortcut icon" href="{% asset 'favicon.ico' @path %}" />
 
-  <link rel="shortcut icon" href="{% asset 'favicon.ico' @path %}">
-
-  {% asset main.css %}
-  {% asset print.css %}
+  {% asset main.css %} {% asset print.css %}
 
   <!-- Social meta -->
   <meta property="fb:admins" content="1322847221,508316988" />
   <meta property="og:site_name" content="{{ site.title }}" />
-  <meta property="article:publisher" content="https://www.facebook.com/ucsantacruz" />
+  <meta
+    property="article:publisher"
+    content="https://www.facebook.com/ucsantacruz"
+  />
   <meta property="og:type" content="article" />
   <meta property="og:title" content="{{ page.title }}" />
-  <meta property="og:description" content="{% if page.subhead %}{{ page.subhead }}{% else %}{{ site.description }}{% endif %}" />
-  <meta property="og:url" content="{{ page.url | prepend: site.baseurl | prepend: site.url }}" />
+  <meta
+    property="og:description"
+    content="{% if page.subhead %}{{ page.subhead }}{% else %}{{ site.description }}{% endif %}"
+  />
+  <meta
+    property="og:url"
+    content="{{ page.url | prepend: site.baseurl | prepend: site.url }}"
+  />
   {% if page.banner %}
-  <meta property="og:image" content='{{ site.url }}{% asset "{{ page.banner.file }}" @path %}' />
-  <meta name="twitter:image" content='{{ site.url }}{% asset "{{ page.banner.file }}" @path %}' />
+  <meta
+    property="og:image"
+    content='{{ site.url }}{% asset "{{ page.banner.file }}" @path %}'
+  />
+  <meta
+    name="twitter:image"
+    content='{{ site.url }}{% asset "{{ page.banner.file }}" @path %}'
+  />
   {% else %}
-  <meta property="og:image" content='{{ site.url }}{% asset "{{ site.cover }}" @path %}' />
-  <meta name="twitter:image" content='{{ site.url }}{% asset "{{ site.cover }}" @path %}' />
+  <meta
+    property="og:image"
+    content='{{ site.url }}{% asset "{{ site.cover }}" @path %}'
+  />
+  <meta
+    name="twitter:image"
+    content='{{ site.url }}{% asset "{{ site.cover }}" @path %}'
+  />
   {% endif %}
-  <meta content="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}"/>
-  <meta content="twitter:description" content="{% if page.subhead %}{{ page.subhead }}{% else %}{{ site.description }}{% endif %}"/>
-  <meta content="@ucsc" name="twitter:site"/>
-  <meta content="summary" name="twitter:card"/>
-  <meta content="{{ page.url | prepend: site.baseurl | prepend: site.url }}" name="twitter:url"/>
- 
+  <meta
+    content="twitter:title"
+    content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}"
+  />
+  <meta
+    content="twitter:description"
+    content="{% if page.subhead %}{{ page.subhead }}{% else %}{{ site.description }}{% endif %}"
+  />
+  <meta content="@ucsc" name="twitter:site" />
+  <meta content="summary" name="twitter:card" />
+  <meta
+    content="{{ page.url | prepend: site.baseurl | prepend: site.url }}"
+    name="twitter:url"
+  />
+
   {% if page.styles %}
   <style>
-    {{ page.styles }}  
+    {{ page.styles }}
   </style>
   {% endif %}
-
 </head>

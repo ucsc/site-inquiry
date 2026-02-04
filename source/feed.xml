@@ -1,0 +1,39 @@
+---
+layout: null
+---
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>{{ site.title | xml_escape }}</title>
+    <description>{{ site.description | xml_escape }}</description>
+    <link>{{ site.url }}{{ site.baseurl }}/</link>
+    <atom:link href="{{ site.url }}/feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
+    <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
+    <generator>Jekyll v{{ jekyll.version }}</generator>
+    {% assign sorted_articles = site.articles | sort: 'date' | reverse %}
+    {% for article in sorted_articles %}
+      <item>
+        <title>{{ article.title | xml_escape }}</title>
+        <description><![CDATA[{{ article.content | markdownify }}]]></description>
+        {% if article.date %}
+        <pubDate>{{ article.date | date_to_rfc822 }}</pubDate>
+        {% endif %}
+        <link>{{ article.url | prepend: site.baseurl | prepend: site.url }}</link>
+        <guid isPermaLink="true">{{ article.url | prepend: site.baseurl | prepend: site.url }}</guid>
+        {% if article.author %}
+        <author>{{ site.email }} ({{ article.author }})</author>
+        {% endif %}
+        {% if article.issue %}
+        <category domain="issue">{{ article.issue | xml_escape }}</category>
+        {% endif %}
+        {% for tag in article.tags %}
+        <category>{{ tag | xml_escape }}</category>
+        {% endfor %}
+        {% if article.category %}
+        <category>{{ article.category | xml_escape }}</category>
+        {% endif %}
+      </item>
+    {% endfor %}
+  </channel>
+</rss>
