@@ -32,7 +32,7 @@ layout: null
         <dc:creator><![CDATA[{{ article.author | default: site.author }}]]></dc:creator>
         <guid isPermaLink="false">{{ article.url | prepend: site.baseurl | prepend: site.url }}</guid>
         <description></description>
-        <content:encoded><![CDATA[{{ article.content | markdownify }}]]></content:encoded>
+        <content:encoded><![CDATA[{{ article.content | render_liquid | markdownify }}]]></content:encoded>
         <excerpt:encoded><![CDATA[{{ article.subhead | default: "" }}]]></excerpt:encoded>
         <wp:post_name><![CDATA[{{ article.slug }}]]></wp:post_name>
         <wp:status>publish</wp:status>
