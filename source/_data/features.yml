@@ -81,3 +81,31 @@
   author:
     first: "Ramin"
     last: "Skibba"
+
+- title: "Learning through participation"
+  subhead: "Barbara Rogoff has studied the collaborative method Mayan communities use to teach children for over 30 years"
+  url: "https://news.ucsc.edu/2024/11/learning-through-participation/"
+  author:
+    first: "Farah"
+    last: "Aziz Annesha"
+
+- title: "Genomes in the Wild: A Q&A with Professor Joanna Lynne Kelley on Evolution, Extremes, and Hibernating Bears"
+  subhead: "At UC Santa Cruz’s Coastal Science Campus, Kelley is uncovering how life endures in extreme environments."
+  url: "https://news.ucsc.edu/2024/08/genomes-in-the-wild-a-qa-with-professor-joanna-lynne-kelley-on-evolution-extremes-and-hibernating-bears/"
+  author:
+    first: "Mahima"
+    last: "Samraik"
+
+- title: "A Greener Solution for Artificial Intelligence"
+  subhead: "A new large language model developed at UCSC removes math from the equation, giving artificial intelligence a more sustainable, greener future."
+  url: "https://news.ucsc.edu/2024/06/a-greener-solution-for-artificial-intelligence/"
+  author:
+    first: "Elissa"
+    last: "Welle"
+
+- title: "Finding the most natural solutions to climate change"
+  subhead: "From a young age, Rae Taylor-Burns knew she wanted to help solve the planet’s most pressing issue."
+  url: "https://news.ucsc.edu/2024/05/finding-the-natural-solutions-to-climate-change/"
+  author:
+    first: "Anna"
+    last: "Fitzgerald Guth"
