@@ -4,7 +4,7 @@ module Jekyll
       template = Liquid::Template.parse(input)
       template.render(@context)
     end
-    
+
     def absolutify_images(input)
       return input if input.nil? || input.empty?
       site_url = @context.registers[:site].config['url']
