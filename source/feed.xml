@@ -32,7 +32,7 @@ layout: null
         <dc:creator><![CDATA[{{ article.author | default: site.author }}]]></dc:creator>
         <guid isPermaLink="false">{{ article.url | prepend: site.baseurl | prepend: site.url }}</guid>
         <description></description>
-        <content:encoded><![CDATA[{{ article.content | render_liquid | markdownify }}]]></content:encoded>
+        <content:encoded><![CDATA[{{ article.content | render_liquid | markdownify | absolutify_images }}]]></content:encoded>
         <excerpt:encoded><![CDATA[{{ article.subhead | default: "" }}]]></excerpt:encoded>
         <wp:post_name><![CDATA[{{ article.slug }}]]></wp:post_name>
         <wp:status>publish</wp:status>
@@ -46,8 +46,9 @@ layout: null
         <category domain="post_tag" nicename="{{ tag | slugify }}"><![CDATA[{{ tag }}]]></category>
         {% endfor %}
         {% if article.category %}
-        <category domain="inquiry" nicename="{{ article.category | slugify }}"><![CDATA[{{ article.category }}]]></category>
+        <category domain="inquiry-section" nicename="{{ article.category | slugify }}"><![CDATA[{{ article.category }}]]></category>
         {% endif %}
+        <category domain="category" nicename="inquiry"><![CDATA[Inquiry]]></category>
       </item>
     {% endfor %}
   </channel>
