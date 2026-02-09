@@ -37,6 +37,8 @@ layout: null
         {% else %}
         <dc:creator><![CDATA[{{ site.author }}]]></dc:creator>
         {% endif %}
+        {% elsif article.author.name %}
+        <dc:creator><![CDATA[{{ article.author.name }}]]></dc:creator>
         {% elsif article.author %}
         <dc:creator><![CDATA[{{ article.author }}]]></dc:creator>
         {% else %}
