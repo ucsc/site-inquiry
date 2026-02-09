@@ -5,6 +5,9 @@ module Jekyll
 
       # Remove include_relative tags that cause issues in feed context (multi-line aware)
       cleaned_input = input.gsub(/\{%\s*include_relative\s+[^%]*%\}/m, '')
+
+      begin
+        template = Liquid::Template.parse(cleaned_input)
         template.render(@context)
       rescue => e
         Jekyll.logger.warn "Render Liquid", "Error rendering liquid: #{e.message}"
