@@ -29,7 +29,19 @@ layout: null
         <wp:post_date><![CDATA[{{ article.date | date: "%Y-%m-%d %H:%M:%S" }}]]></wp:post_date>
         <wp:post_date_gmt><![CDATA[{{ article.date | date: "%Y-%m-%d %H:%M:%S" }}]]></wp:post_date_gmt>
         {% endif %}
-        <dc:creator><![CDATA[{{ article.author | default: site.author }}]]></dc:creator>
+        {% assign author_last = article['author-last'] %}
+        {% if author_last %}
+        {% assign contrib = site.data.contributors | where:"last", author_last | first %}
+        {% if contrib %}
+        <dc:creator><![CDATA[{{ contrib.first }} {{ contrib.last }}]]></dc:creator>
+        {% else %}
+        <dc:creator><![CDATA[{{ site.author }}]]></dc:creator>
+        {% endif %}
+        {% elsif article.author %}
+        <dc:creator><![CDATA[{{ article.author }}]]></dc:creator>
+        {% else %}
+        <dc:creator><![CDATA[{{ site.author }}]]></dc:creator>
+        {% endif %}
         <guid isPermaLink="false">{{ article.url | prepend: site.baseurl | prepend: site.url }}</guid>
         <description></description>
         <content:encoded><![CDATA[{{ article.content | render_liquid | markdownify | absolutify_images }}]]></content:encoded>

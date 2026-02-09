@@ -1,8 +1,15 @@
 module Jekyll
   module RenderLiquidFilter
     def render_liquid(input)
-      template = Liquid::Template.parse(input)
-      template.render(@context)
+      return input if input.nil? || input.empty?
+
+      # Remove include_relative tags that cause issues in feed context (multi-line aware)
+      cleaned_input = input.gsub(/\{%\s*include_relative\s+[^%]*%\}/m, '')
+        template.render(@context)
+      rescue => e
+        Jekyll.logger.warn "Render Liquid", "Error rendering liquid: #{e.message}"
+        cleaned_input
+      end
     end
 
     def absolutify_images(input)
