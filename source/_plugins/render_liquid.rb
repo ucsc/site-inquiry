@@ -19,9 +19,14 @@ module Jekyll
       return input if input.nil? || input.empty?
       site_config = @context.registers[:site].config
       site_url = site_config['url']
+
       # Convert relative image src to absolute URLs
-      input.gsub(/src="\/assets\//, "src=\"#{site_url}/assets/")
-          .gsub(/src='\/assets\//, "src='#{site_url}/assets/")
+      result = input.gsub(/src="\/assets\//, "src=\"#{site_url}/assets/")
+                    .gsub(/src='\/assets\//, "src='#{site_url}/assets/")
+
+      # Remove asset hashes (64-character hex strings before file extension)
+      # Example: image-abc123...xyz.jpg → image.jpg
+      result.gsub(/(-[a-f0-9]{64})(\.(jpg|jpeg|png|gif|svg|webp))/i, '\2')
     end
   end
 end
