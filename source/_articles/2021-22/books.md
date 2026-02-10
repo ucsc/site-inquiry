@@ -1,6 +1,6 @@
 ---
 layout: page
-issue: 2021cd 
+issue: 2021
 category: credits
 order: 2
 title: "PEN & INQ"
@@ -20,7 +20,7 @@ While this militarization supported a strong antifascist program in postwar Euro
 
 Citing the several million, mostly civilian, Asian deaths during the Cold War, Hong argues that what the U.S. called "democratization" was more akin to fascism. "There are deep interconnections between U.S. foreign policy and militarized violence," Hong said, "including domestic police brutality."
 
-****
+---
 
 ## Eco-friendly Trade
 
@@ -34,7 +34,7 @@ The catalyst? A bilateral trade agreement with the U.S. requiring Peru to comply
 
 While such agreements can drive environment-friendly changes, including ones that can help meet climate change objectives, they can also have unintended consequences. For example, Peru's rapid implementing of its CITES obligations bypassed many public participation processes. "Trade agreements can be useful tools," Jinnah said, "but they should be used with careful attention to domestic contexts."
 
-****
+---
 
 ## Digital Necropolis
 
@@ -43,11 +43,11 @@ While such agreements can drive environment-friendly changes, including ones tha
 </figure>
 After working on a UCLA-led digital reconstruction of the ancient Egyptian temple site of [Karnak](http://dlib.etc.ucla.edu/projects/Karnak/), associate professor of history [**Elaine Sullivan**](https://humanities.ucsc.edu/academics/faculty/index.php?uid=easulliv) set her sights on [Saqqara](https://en.wikipedia.org/wiki/Saqqara), a complex, deeply studied necropolis, home to Egypt's first pyramid. Sullivan wanted to explore the site in a new way and recreate for modern viewers the landscape ancient people might have experienced.
 
-She spent five years crafting a digital, three-dimensional reconstruction that joins modern data with legacy data from excavations dating back to 1850. The resulting "born-digital" publication, [***Constructing the Sacred: Visibility and Ritual Landscape at the Egyptian Necropolis of Saqqara***](https://constructingthesacred.org/) (Stanford University Press, 2020), spans 2,700 years of ancient Egyptian history and includes 3D models that readers can explore through both space and time.
+She spent five years crafting a digital, three-dimensional reconstruction that joins modern data with legacy data from excavations dating back to 1850. The resulting "born-digital" publication, [**_Constructing the Sacred: Visibility and Ritual Landscape at the Egyptian Necropolis of Saqqara_**](https://constructingthesacred.org/) (Stanford University Press, 2020), spans 2,700 years of ancient Egyptian history and includes 3D models that readers can explore through both space and time.
 
 "This is a visualization of our archeological knowledge of Saqqara," Sullivan said, "a tool to help us think about and hypothesize about the site in new ways."
 
-****
+---
 
 ## Healing Through Art
 
@@ -61,7 +61,7 @@ Between 1975 and 1979, the Khmer Rouge in Cambodia exterminated roughly two mill
 
 In one poignant exchange, an artist sent to the U.S. for adoption at age two tells Ly of her return to her father's village at age 40 for a work of performance art. Ly recounts her "symbolic act of healing" in which she broke 40 clay pots and painstakingly pieced them back together over six days.
 
-****
+---
 
 ## Meaningful Mechanics
 
@@ -70,6 +70,6 @@ In one poignant exchange, an artist sent to the U.S. for adoption at age two tel
 </figure>
 Video games are often the primary media consumed by many people. But what are games actually doing when we play them? Professor of computational media [**Noah Wardrip-Fruin**](https://www.soe.ucsc.edu/people/nwf) distills this question into two parts: How do games work? And how do we make them say what we want? "Those might sound like two quite different levels, but they are deeply interconnected," said Wardrip-Fruin, whose [**How Pac-Man Eats**](https://mitpress.mit.edu/books/how-pac-man-eats) (MIT Press, 2020) explores how video games meld mechanics with broader meaning.
 
-In the titular example, [Pac-Man](https://www.pacman.com/en/) "eats" because a game designer expanded the meaning of a collision. In a more complex example, Wardrip-Fruin describes the game [*Dys4ia*](http://www.digiart21.org/art/dys4ia), in which speech bubbles take on physical form to illustrate the power of words.
+In the titular example, [Pac-Man](https://www.pacman.com/en/) "eats" because a game designer expanded the meaning of a collision. In a more complex example, Wardrip-Fruin describes the game [_Dys4ia_](http://www.digiart21.org/art/dys4ia), in which speech bubbles take on physical form to illustrate the power of words.
 
 Wardrip-Fruin said the book will appeal to people interested in video games with cultural, political, and personal themes, as well as those wishing to understand how games operate "on a deeply detailed level."
