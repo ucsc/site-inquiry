@@ -53,6 +53,16 @@ layout: null
         <wp:post_type>post</wp:post_type>
         <wp:comment_status>closed</wp:comment_status>
         <wp:ping_status>closed</wp:ping_status>
+        {% if article.banner.file %}
+        <wp:postmeta>
+          <wp:meta_key><![CDATA[_inquiry_banner_image]]></wp:meta_key>
+          <wp:meta_value><![CDATA[{{ site.url }}/assets/{{ article.banner.file }}]]></wp:meta_value>
+        </wp:postmeta>
+        <wp:postmeta>
+          <wp:meta_key><![CDATA[_inquiry_banner_position]]></wp:meta_key>
+          <wp:meta_value><![CDATA[{{ article.banner.position }}]]></wp:meta_value>
+        </wp:postmeta>
+        {% endif %}
         {% if article.issue %}
         <category domain="inquiry-issue" nicename="{{ article.issue }}"><![CDATA[{{ article.issue }}]]></category>
         {% endif %}
