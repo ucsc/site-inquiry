@@ -33,8 +33,7 @@
 
 {% if page.class == 'front' %}
 <div class="banner-wrapper front">
-  {% capture banner_alt %}{{ page.banner.text }}{% endcapture %} {% asset "{{
-  page.banner.file }}" @magick:gravity=east @magick:crop=1400x480+0+0
-  alt:banner_alt %}
+  {% asset "{{ page.banner.file }}" @magick:gravity=east
+  @magick:crop=1400x480+0+0 alt='{{ page.banner.text }}' %}
 </div>
 {% endif %}
