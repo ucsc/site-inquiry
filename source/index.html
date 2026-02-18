@@ -12,36 +12,13 @@ current: 2025-26
   <section class="two-thirds block toc">
     <h1 class="issue-title">{{ page.current }}</h1>
 
-    <ul class="toc-list plain">
-      <li><a href="/{{ page.current }}/welcome/">Welcome</a></li>
-      <li>
-        <a href="/{{ page.current }}/briefs/"
-          ><span class="caps">Brief</span>
-          <span class="heavy">inquiries</span></a
-        >
-      </li>
-      <li>
-        <a href="/{{ page.current }}/books/"
-          ><span class="caps">Pen</span> <span class="heavy">&amp;</span>
-          <span class="caps">Inq</span></a
-        >
-      </li>
-      <li>
-        <a href="/{{ page.current }}/contributors/"
-          ><span class="caps">Inquiring</span>
-          <span class="heavy">minds</span></a
-        >
-      </li>
-    </ul>
-
-    <h2 class="header highlight">Features</h2>
     <div class="features">
       <ul class="toc-list">
         {% for feature in site.data.features %}
         <li>
-          <h3>
+          <h2>
             <a href="{{ feature.url }}">{{ feature.title }}</a>
-          </h3>
+          </h2>
           <p class="teaser">{{ feature.subhead }}</p>
 
           <p class="author">
@@ -63,11 +40,6 @@ current: 2025-26
       aquaculture facility, all on the same gently sloping campus hill
       overlooking the Monterey Bay. Credit: Carolyn Lagattuta, with permission.
     </figcaption>
-    <h3 class="index-headline featured">Download the PDF</h3>
-    <a href="/2022-23/Inquiry2022.pdf"
-      >{% asset '2022/inquiry2022.jpg' @magick:resize=380 alt:'2022 cover of
-      Inquiry Magazine' %}</a
-    >
   </section>
 </div>
 {% include back-to-top.html %}
