@@ -10,6 +10,7 @@ gem 'html-proofer'
 gem 'scss_lint'
 gem 'sprockets', '~> 3.7'
 gem 'kramdown-parser-gfm'
+gem 'ffi', '= 1.17.2'
 
 group :jekyll_plugins do
   gem "jekyll-seo-tag"
