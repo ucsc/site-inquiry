@@ -1,80 +1,82 @@
 .features {
-    border: 1px solid $orange;
-    border-width: 1px 0 0;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    padding: .5em 0;
+  border: 1px solid $orange;
+  border-width: 1px 0 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 0.5em 0;
 }
 
 .header.highlight {
-    border: 0;
-    color: $orange;
-    font-size: 1em;
-    font-weight: 400;
-    letter-spacing: .14em;
-    margin-bottom: 0;
-    text-transform: uppercase;
+  border: 0;
+  color: $orange;
+  font-size: 1em;
+  font-weight: 400;
+  letter-spacing: 0.14em;
+  margin-bottom: 0;
+  text-transform: uppercase;
 }
 
 .toc-list {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    li {
-        flex-basis: 48%;
-        margin-bottom: 1.5em;
-        padding: .5em 0;
-        h3,
-        p {
-            margin: 0;
-            padding: 0;
-        }
-        h3 {
-            font-size: 1.5em;
-            font-weight: 600;
-            margin-bottom: .2em;
-            @include media($mobile) {
-                font-size: 1.2em;
-            }
-        }
-        p {
-            color: lighten($text-black, 26%);
-            font-weight: 400;
-            margin-bottom: .25em;
-        }
-        a {
-            text-decoration: none;
-        }
-        .author {
-            border: 0;
-            color: $light-blue;
-            font-size: .8em;
-            font-weight: 400;
-            text-align: left;
-        }
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  li {
+    flex-basis: 48%;
+    margin-bottom: 1.5em;
+    padding: 0.5em 0;
+    h2,
+    h3,
+    p {
+      margin: 0;
+      padding: 0;
     }
+    h2,
+    h3 {
+      font-size: 1.5em;
+      font-weight: 600;
+      margin-bottom: 0.2em;
+      @include media($mobile) {
+        font-size: 1.2em;
+      }
+    }
+    p {
+      color: lighten($text-black, 26%);
+      font-weight: 400;
+      margin-bottom: 0.25em;
+    }
+    a {
+      text-decoration: none;
+    }
+    .author {
+      border: 0;
+      color: $light-blue;
+      font-size: 0.8em;
+      font-weight: 400;
+      text-align: left;
+    }
+  }
 }
 
 .plain {
-    margin-top: .25em;
-    li {
-        margin-bottom: .25em;
+  margin-top: 0.25em;
+  li {
+    margin-bottom: 0.25em;
+  }
+  a {
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-decoration: none;
+    @include media($mobile) {
+      font-size: 1.2em;
     }
-    a {
-        font-size: 1.5rem;
-        font-weight: 400;
-        text-decoration: none;
-        @include media($mobile) {
-            font-size: 1.2em;
-        }
-    }
-    .toc-list a,
-    .heavy {
-        font-weight: 600;
-    }
+  }
+  .toc-list a,
+  .heavy {
+    font-weight: 600;
+  }
 }
