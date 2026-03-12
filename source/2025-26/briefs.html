@@ -1,0 +1,43 @@
+---
+layout: post
+title: "BRIEF inquiries"
+class: briefs
+---
+
+<div class="row">
+  <section>
+
+    {% assign sorted_briefs = site.articles | where:'issue','2022' | sort: 'order' %}
+    {% for post in sorted_briefs %}
+    {% if post.category == 'brief' %}
+    <div class="brief">
+
+      {% if post.image.file %}
+      <figure>
+        {% asset "{{ post.image.file }}" @magick:resize=300 %}
+        {% if post.image.caption %}
+          <figcaption>
+              {{ post.image.caption }}
+          </figcaption>
+        {% endif %}
+      </figure>
+      {% endif %}
+
+      {% if post.tags %}
+        <h4 class="tags" style="color:{{ post.colors.tag }}; border-bottom: 1px solid {{ post.colors.tag }};">{{ post.tags | join:' / ' }}</h4>
+      {% endif %}
+
+      <h2 id="{{ post.title | slugify }}">
+        {{ post.title }}
+      </h2>
+
+      {{ post.content }}
+
+
+    </div>
+    {% endif %}
+    {% endfor %}
+
+</section>
+  {% include back-to-top.html %}
+</div>

@@ -1,7 +1,12 @@
 services:
   jekyll:
     image: jekyll/jekyll:3.8.6
-    command: ["sh", "-c", "gem install bundler -v 2.4.22 && jekyll serve --livereload --incremental"]
+    command:
+      [
+        "sh",
+        "-c",
+        "gem update --system 3.2.3 && gem install bundler -v 2.4.22 && bundle install && jekyll serve --livereload",
+      ]
     ports:
       - "4000:4000"
       - "35729:35729"

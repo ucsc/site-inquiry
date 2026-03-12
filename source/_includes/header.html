@@ -1,13 +1,13 @@
 <div class="omnibar">
-
-  <a href="http://www.ucsc.edu">{% asset 'ucsc-logo-white-300w.png' alt='UC Santa Cruz' width='210' %}</a>
+  <a href="http://www.ucsc.edu"
+    >{% asset 'ucsc-logo-new.svg' alt='UC Santa Cruz' width='210' %}</a
+  >
 </div>
 
 <header class="site-header" role="banner">
-
   <div class="logo-wrapper">
     <a href="/" class="logo">
-      {% asset 'inquiry.svg' alt='Inquiry at UC Santa Cruz' width='380' %}
+      {% asset 'inquiry-new.png' alt='Inquiry at UC Santa Cruz' width='680' %}
     </a>
   </div>
 
@@ -16,30 +16,24 @@
       <li class="nav-item nav-item-dropdown">
         <a href="#" class="dropdown-trigger">Issues</a>
         <ul class="dropdown-menu">
-        {% assign sortedIssues = site.data.issues | sort: "issue" | reverse %}
-        {% for issue in sortedIssues %}
-        <li class="dropdown-menu-item">
+          {% assign sortedIssues = site.data.issues | sort: "issue" | reverse %}
+          {% for issue in sortedIssues %}
+          <li class="dropdown-menu-item">
             <a href="{{issue.url}}">{{ issue.issue }}</a>
           </li>
-        {% endfor %}
+          {% endfor %}
         </ul>
       </li>
       <li class="nav-item"><a href="/contact/">Contact us</a></li>
     </ul>
   </div>
-
 </header>
-
-
-
 
 <!-- header end -->
 
 {% if page.class == 'front' %}
 <div class="banner-wrapper front">
-  {% asset "{{ page.banner.file }}" @magick:gravity=east @magick:crop=1400x480+0+0 alt:"{{ page.banner.text }}" %}
+  {% asset "{{ page.banner.file }}" @magick:gravity=east
+  @magick:crop=1400x480+0+0 alt='{{ page.banner.text }}' %}
 </div>
 {% endif %}
-
-
-

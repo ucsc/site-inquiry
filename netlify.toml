@@ -1,0 +1,8 @@
+[build]
+  command = "gem install bundler -v 2.4.10 --no-document && bundle install && bundle exec jekyll build"
+  publish = "build"
+
+[build.environment]
+  RUBY_VERSION = "2.7.8"
+  BUNDLER_VERSION = "2.4.10"
+  BUNDLE_FORCE_RUBY_PLATFORM = "true"
